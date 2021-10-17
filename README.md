@@ -11,11 +11,10 @@ A simple Xamarin.Forms demo app with seven primary screens:
 -  an editable detail screen
 -  a user profil page screen 
 
-
-![SplashScreen](./Screenshots/SplashScreen.jpeg)
-![SignIn](./Screenshots/SignInPage.jpeg)
-![SignUp](./Screenshots/SignUpPage.jpeg)
-![Home](./Screenshots/HomePage.jpeg)
-![Detail](./Screenshots/DetailPage.jpeg)
-![Detail1](./Screenshots/DetailPage1.jpeg)
-![User](./Screenshots/UserProfilePage.jpeg)
+<img src="./Screenshots/SplashScreen.jpeg" width="350" height="450"/>
+<img src="./Screenshots/SignInPage.jpeg" width="350" height="450"/>
+<img src="./Screenshots/SignUpPage.jpeg" width="350" height="450"/>
+<img src="./Screenshots/HomePage.jpeg" width="350" height="450"/>
+<img src="./Screenshots/DetailPage.jpeg" width="350" height="450"/>
+<img src="./Screenshots/DetailPage1.jpeg" width="350" height="450"/>
+<img src="./Screenshots/UserProfilePage.jpeg" width="350" height="450"/>

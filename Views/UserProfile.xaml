@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeDeliveryApp.Views.UserProfile">
+    <StackLayout Padding="0" Margin="0">
+        <Frame BackgroundColor="Transparent" HeightRequest="110" HorizontalOptions="FillAndExpand" Padding="0">
+            <Image Source="usericon.png" HeightRequest="120" VerticalOptions="End" Aspect="AspectFit"/>
+          
+
+
+
+        </Frame>
+        <Label Text="MY PROFILE " TextColor="black" FontSize="Medium" VerticalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold"   CharacterSpacing="5"></Label>
+
+        <TableView Margin="60">
+            <TableRoot>
+                <TableSection>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Username :" FontSize="16"/>
+                            <Label x:Name="Username" FontSize="16" HorizontalOptions="EndAndExpand"/>
+                           
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Phone :" FontSize="16"/>
+                            <Label x:Name="Phone" FontSize="16" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                    
+                    
+                </TableSection>
+               
+            </TableRoot>
+        </TableView>
+      
+               
+               
+                <Button Text="Update Your Informations" BackgroundColor="SaddleBrown"  Opacity ="0.5" TextColor="white" HeightRequest="50" VerticalOptions="Start" Grid.Row="3" Clicked="OnProfileUpdate"/>
+
+    </StackLayout>
+
+
+</ContentPage>

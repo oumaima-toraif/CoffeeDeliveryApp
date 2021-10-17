@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeDeliveryApp.Views.LoginPage">
+    <StackLayout Padding="0" BackgroundColor="black" Margin="20" >
+
+        <Grid>
+            <StackLayout Padding="0" Margin="0">
+                <Frame BackgroundColor="Transparent" HeightRequest="110" HorizontalOptions="FillAndExpand" Padding="0">
+                    <Image Source="cup.jpg" Aspect="AspectFill"/>
+
+
+
+                </Frame>
+            </StackLayout>
+            <StackLayout Margin="15,110,20,0">
+
+                <Frame BackgroundColor="white" HasShadow="True" HeightRequest="480" HorizontalOptions="FillAndExpand">
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label Text="SIGN IN" TextColor="Black" FontSize="Large" FontAttributes="Bold"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="Center" TextDecorations="Underline"/>
+                        <StackLayout Margin="0,25,0,0">
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="white" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" Margin="7,7,0,7" HorizontalOptions="Start">
+                                        <Image Source="usericon.png" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <Entry x:Name="usernameEntry" Placeholder="Username" TextColor="Black"  HorizontalOptions="FillAndExpand" Margin="0,0,30,0"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0,20,0,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="white" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" Margin="7,7,0,7" HorizontalOptions="Start">
+                                        <Image Source="iconpass.png" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+                                    <Entry  x:Name="passwordEntry" Placeholder="Password" IsPassword="True" TextColor="Black"  HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox IsChecked="False" Color="beige"/>
+                            <Label Text="Remember me" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                            <Label Text="Forgot Password" HorizontalTextAlignment="End" VerticalTextAlignment="Center" TextColor="SaddleBrown" HorizontalOptions="EndAndExpand" Margin="1" FontAttributes="bold"  />
+                        </StackLayout>
+                        <Button Text="LOGIN" BackgroundColor="SaddleBrown" TextColor="White" FontAttributes="Bold" CornerRadius="30" Clicked="OnLoginClicked"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+
+                            <Label Text="Still Not Connected ?" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+
+
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Button Text="SIGN UP" BackgroundColor="SaddleBrown" TextColor="white" FontAttributes="Bold" CornerRadius="30" Clicked="OnSignUpButtonClicked" />
+                        </StackLayout>
+                        <Label x:Name="LoginFailed">
+
+                        </Label>
+
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

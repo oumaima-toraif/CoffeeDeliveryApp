@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeDeliveryApp.Views.SignUpPage">
+    <StackLayout Padding="0" BackgroundColor="black" Margin="20" >
+
+        <Grid>
+            <StackLayout Padding="0" Margin="0">
+
+                <Frame BackgroundColor="Transparent" HeightRequest="110" HorizontalOptions="FillAndExpand" Padding="0" >
+                    <Image Source="cup.jpg" Aspect="AspectFill" Margin="0"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout Margin="15,110,15,0">
+
+                <Frame BackgroundColor="white" HasShadow="True" HeightRequest="480" HorizontalOptions="FillAndExpand">
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label Text="SIGN UP" TextColor="Black" FontSize="Large" FontAttributes="Bold"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  TextDecorations="Underline"/>
+                        <StackLayout Margin="0,25,0,0" VerticalOptions="CenterAndExpand" Padding="5">
+
+                            <StackLayout Orientation="Horizontal">
+                                <Frame BackgroundColor="white" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" Margin="7,7,0,7" HorizontalOptions="Start">
+                                    <Image Source="phoneicon.png" Aspect="AspectFill" Margin="0"/>
+                                </Frame>
+
+                                <Entry x:Name="PhoneEntry" Placeholder="Phone" TextColor="Black"  HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+                            </StackLayout>
+
+
+                            <StackLayout Orientation="Horizontal">
+                                <Frame BackgroundColor="AliceBlue" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" Margin="7,7,0,7" HorizontalOptions="Start">
+                                    <Image Source="usericon.png" Aspect="AspectFill" Margin="0"/>
+                                </Frame>
+
+                                <Entry x:Name="UsernameEntry" Placeholder="Username" TextColor="Black"  HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame BackgroundColor="white" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" Margin="7,7,0,7" HorizontalOptions="Start">
+                                    <Image Source="iconpass.png" Aspect="AspectFill" Margin="0"/>
+                                </Frame>
+
+                                <Entry x:Name="PasswordEntry" Placeholder="Password" TextColor="Black"  HorizontalOptions="FillAndExpand" Margin="0,0,15,0" IsPassword="True"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame BackgroundColor="white" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" Margin="7,7,0,7" HorizontalOptions="Start">
+                                    <Image Source="iconpass.png" Aspect="AspectFill" Margin="0"/>
+                                </Frame>
+
+                                <Entry x:Name="PasswdEntry" Placeholder="ConfirmPassword" TextColor="Black"   IsPassword="True"  HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+                            </StackLayout>
+
+
+
+
+
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                                <Button Text="Confirm" BackgroundColor="SaddleBrown" TextColor="White" FontAttributes="Bold" CornerRadius="30" Clicked="onConfirmClicked"/>
+
+
+                            </StackLayout>
+                        </StackLayout>
+
+                        <Label Text="Already Have an Account ?" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                        <StackLayout>
+                            <Button Text="SIGN IN" BackgroundColor="SaddleBrown" TextColor="white" FontAttributes="Bold" CornerRadius="30" Clicked="onClickedLogin" />
+                        </StackLayout>
+
+
+
+
+
+
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

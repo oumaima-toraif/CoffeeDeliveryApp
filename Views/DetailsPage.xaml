@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeDeliveryApp.Views.DetailsPage">
+    <StackLayout Padding="0" Margin="0">
+        <Frame BackgroundColor="Black" HeightRequest="110" HorizontalOptions="FillAndExpand" Padding="0">
+            <Label Text="ITEM DETAIL  " TextColor="white" FontSize="Medium" VerticalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold"   CharacterSpacing="5"></Label>
+
+
+
+        </Frame>
+        <StackLayout Spacing="0" HorizontalOptions="Center" VerticalOptions="Start">
+            <Label x:Name="ProductPrice"  TextColor="SaddleBrown" FontFamily="ThemeFont" FontSize="45"  HorizontalOptions="Center" Opacity="0.5">
+                
+            </Label>
+            
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center">
+
+            <Image  x:Name="ProductImage" HeightRequest="180"/>
+
+
+        </StackLayout>
+        <StackLayout Grid.Row="2" Spacing="20" HorizontalOptions="FillAndExpand">
+            <Label x:Name="ProductName" FontSize="20"  TextColor="SaddleBrown"  FontFamily="ThemeFont" Opacity="0.5" HorizontalOptions="End"/>
+            <BoxView BackgroundColor="SaddleBrown" Opacity="0.5" HeightRequest="2" WidthRequest="75" VerticalOptions="Start" HorizontalOptions="End"/>
+            
+            <Label x:Name="ProductDes" FontAttributes="None"  TextColor="black" WidthRequest="250" FontFamily="LightFont" FontSize="12" HorizontalOptions="End" HorizontalTextAlignment="End"/>
+             
+            <Button Text="ORDER NOW" TextColor="White" HeightRequest="35" CornerRadius="17" BackgroundColor="SaddleBrown" Opacity="0.50" Clicked="OnOrderClicked"/>
+        </StackLayout>
+        
+
+
+    </StackLayout>
+</ContentPage>

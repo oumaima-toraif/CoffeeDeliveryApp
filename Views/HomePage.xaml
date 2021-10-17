@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeeDeliveryApp.Views.HomePage" NavigationPage.HasNavigationBar="False">
+
+
+    <StackLayout Padding="0" BackgroundColor="white" Margin="5" >
+        <Grid Padding="5,5" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+            <StackLayout Spacing="20" HorizontalOptions="Start" VerticalOptions="Center">
+                <Label x:Name="ID" IsVisible="false" IsEnabled="false"></Label>
+                
+                <ImageButton Source="user.png" Aspect="AspectFit" WidthRequest="20" HeightRequest="20" Clicked="OnUserIconClicked"/>
+                <ImageButton Source="coffeeiconjpg.jpg" Aspect="AspectFit" WidthRequest="25" HeightRequest="25"/>
+                <ImageButton Source="exit.jpg" Aspect="AspectFit" WidthRequest="23" HeightRequest="23" Clicked="OnExitClicked"/>
+            </StackLayout>
+           
+                
+            <StackLayout Spacing="0" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="COFFEE" TextColor="Black" FontSize="50" HorizontalOptions="Center"/>
+                <Label Text="SPOT" Margin="0,-5,0,0" TextColor="SaddleBrown" Opacity="0.5"  FontSize="25" HorizontalOptions="Center"/>
+
+                <Frame BackgroundColor="black"   WidthRequest="200" HeightRequest="150" HorizontalOptions="FillAndExpand"  Margin="10" Padding="10">
+                    <Label Text="MENU" TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+
+
+                </Frame>
+
+            </StackLayout>
+
+        </Grid>
+        <ListView x:Name ="MyListView" HasUnevenRows="True" SeparatorVisibility="Default" ItemTapped="OnItemSelected" Margin="30">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10" RowSpacing="20" ColumnSpacing="15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.RowSpan="2" Source="{Binding Photo}" HeightRequest="60" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="66" />
+                            <Label Grid.Column="1" Text="{Binding Name}" FontAttributes="Bold" VerticalOptions="End" TextColor="SaddleBrown"/>
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
+</ContentPage>

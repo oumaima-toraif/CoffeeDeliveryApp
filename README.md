@@ -1,5 +1,5 @@
 # CoffeeDeliveryApp
-A simple cross platfom Coffee Delivery App developed using C# with Xamarin
+A simple cross platfom Coffee Delivery App developed with Xamarin
 # Screens 
 A simple Xamarin.Forms demo app with seven primary screens:
 

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="COFEEDELIVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="COMMANDE">
+    <Key>
+      <PropertyRef Name="CommandeID" />
+    </Key>
+    <Property Name="CommandeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="UserID" Type="Int32" />
+    <NavigationProperty Name="PRODUCT" Relationship="Self.FK_COMMANDE_PRODUCT1" FromRole="COMMANDE" ToRole="PRODUCT" />
+    <NavigationProperty Name="USER" Relationship="Self.FK_COMMANDE_USER1" FromRole="COMMANDE" ToRole="USER" />
+  </EntityType>
+  <EntityType Name="PRODUCT">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="COMMANDEs" Relationship="Self.FK_COMMANDE_PRODUCT1" FromRole="PRODUCT" ToRole="COMMANDE" />
+  </EntityType>
+  <EntityType Name="USER">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConfirmPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="COMMANDEs" Relationship="Self.FK_COMMANDE_USER1" FromRole="USER" ToRole="COMMANDE" />
+  </EntityType>
+  <Association Name="FK_COMMANDE_PRODUCT1">
+    <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="1" />
+    <End Role="COMMANDE" Type="Self.COMMANDE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCT">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="COMMANDE">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMMANDE_USER1">
+    <End Role="USER" Type="Self.USER" Multiplicity="0..1" />
+    <End Role="COMMANDE" Type="Self.COMMANDE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USER">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="COMMANDE">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="COFEEDELIVEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="COMMANDEs" EntityType="Self.COMMANDE" />
+    <EntitySet Name="PRODUCTs" EntityType="Self.PRODUCT" />
+    <EntitySet Name="USERs" EntityType="Self.USER" />
+    <AssociationSet Name="FK_COMMANDE_PRODUCT1" Association="Self.FK_COMMANDE_PRODUCT1">
+      <End Role="PRODUCT" EntitySet="PRODUCTs" />
+      <End Role="COMMANDE" EntitySet="COMMANDEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMMANDE_USER1" Association="Self.FK_COMMANDE_USER1">
+      <End Role="USER" EntitySet="USERs" />
+      <End Role="COMMANDE" EntitySet="COMMANDEs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

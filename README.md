@@ -9,7 +9,6 @@ A simple Xamarin.Forms demo app with seven primary screens:
 -  a home page screen 
 -  a read-only detail screen
 -  an editable detail screen
--  a user profil page screen 
 
 <img src="./Screenshots/SplashScreen.jpeg" width="350" height="450"/>
 <img src="./Screenshots/SignInPage.jpeg" width="350" height="450"/>
@@ -17,4 +16,3 @@ A simple Xamarin.Forms demo app with seven primary screens:
 <img src="./Screenshots/HomePage.jpeg" width="350" height="450"/>
 <img src="./Screenshots/DetailPage.jpeg" width="350" height="450"/>
 <img src="./Screenshots/DetailPage1.jpeg" width="350" height="450"/>
-<img src="./Screenshots/UserProfilePage.jpeg" width="350" height="450"/>
